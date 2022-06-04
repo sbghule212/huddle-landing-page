@@ -1,0 +1,161 @@
+:root {
+  --ff-open-sans: "Open Sans", sans-serif;
+  --ff-popins: "Poppins", sans-serif;
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  /* min-height: 100vh; */
+  background-color: var(--Violet);
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto;
+  font-family: var(--ff-open-sans);
+  color: white;
+}
+@media (min-width: 700px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 3rem;
+}
+
+.flex {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+@media (min-width: 700px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+.header {
+  margin-block-start: 2rem;
+}
+
+.logo img {
+  max-width: 10rem;
+}
+
+.main {
+  margin-block-start: 5em;
+  display: grid;
+  place-content: center;
+}
+
+.desription {
+  width: 100%;
+  margin-block-start: 2.5em;
+  text-align: center;
+}
+
+.desription h1 {
+  font-family: var(--ff-popins);
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 1.3;
+}
+
+.desription p {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-block-start: 1.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+  padding-inline: 1rem;
+}
+
+.btn {
+  margin-block-start: 1.5rem;
+  padding-inline: 6em;
+  padding-block: 0.8em;
+  color: var(--Violet);
+  font-size: 1rem;
+  font-family: var(--ff-popins);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background-color: var(--Soft-magenta);
+  color: white;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  margin-block: 3rem;
+  font-size: 1.2rem;
+}
+
+.socials div {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.socials .socials-logo {
+  width: 1.5rem;
+}
+
+.socials div:hover,
+.socials div:hover .socials-logo {
+  border-color: var(--Soft-magenta);
+  fill: var(--Soft-magenta);
+}
+
+@media (min-width: 700px) {
+  .desription {
+    width: 40%;
+    text-align: start;
+  }
+  .desription h1 {
+    font-size: 3rem;
+  }
+  .desription p {
+    font-size: 1.3rem;
+  }
+  .btn {
+    padding-inline: 3em;
+    padding-block: 0.8em;
+  }
+  .socials {
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
